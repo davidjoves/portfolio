@@ -47,7 +47,7 @@
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 .navbar__links:hover {
@@ -59,6 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: rotateAndGrow 4s infinite ease-in-out;
 }
 
 
@@ -77,4 +78,28 @@
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
+}
+
+
+@keyframes rotateAndGrow {
+    0% {
+        transform: rotate(0deg) scale(1);
+        /* Start at 0 degrees and normal size */
+    }
+    25% {
+        transform: rotate(-10deg) scale(1.1);
+        /* Rotate left to -10 degrees and grow */
+    }
+    50% {
+        transform: rotate(0deg) scale(1);
+        /* Back to 0 degrees and normal size */
+    }
+    75% {
+        transform: rotate(10deg) scale(1.1);
+        /* Rotate right to 10 degrees and grow */
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+        /* Back to 0 degrees and normal size */
+    }
 }
