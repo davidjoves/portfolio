@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #000000 ;
+    background: #000000;
     /* Set background color for the body */
 }
 ⁡⁣⁢⁣​‌‍‌
@@ -24,8 +24,8 @@ body {
 
 .navbar__container {
     display: flex;
-    background: #000000 ;
-    background-color: #000000 ;
+    background: #000000;
+    background-color: #000000;
     justify-content: space-between;
     height: 80px;
     z-index: 1;
@@ -195,7 +195,7 @@ body {
     align-items: start;
     justify-self: center;
     margin: 0 auto;
-    height: 100vh;
+    height: auto;
     z-index: 1;
     width: 100%;
     padding: 20px;
@@ -209,7 +209,7 @@ body {
     padding: 20px;
     background-color: #eaeaea;
     border-radius: 15px;
-    box-shadow:5px 8px rgba(0, 0, 0, 0.395);
+    box-shadow: 5px 8px rgba(0, 0, 0, 0.395);
     text-align: center;
 }
 .main__content--tech:hover {
@@ -326,7 +326,7 @@ body {
 }
 
 .cursor {
-    border-right: 2px solid white;
+    border-right: 2px solid #384d6d;
     animation: blink 0.75s step-end infinite;
 }
 @keyframes float1 {
@@ -395,5 +395,132 @@ body {
 @keyframes blink {
     50% {
         border-color: transparent;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .main__content--tech {
+        text-align: center;
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: auto;
+    }
+
+    .main__img--container {
+        position: relative;
+        display: inline-block;
+        width: 70%;
+        /* Ensure the image container takes full width of the grid cell */
+        height: auto;
+    }
+
+    #main__img {
+        width: 80%;
+        height: auto;
+    }
+
+    .typing-container {
+        position: absolute;
+        top: 20%;
+        left: 36%;
+        width: 30%;
+        height: auto;
+        color: #384d6d;
+        font-size: 32px;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        transform: rotate(25deg);
+    }
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    .cursor {
+        border-right: 2px solid #384d6d;
+        /* Adjust cursor color as needed */
+        animation: blink 0.75s step-end infinite;
+    }
+}
+@media screen and (max-width: 970px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .main__content--tech {
+        text-align: center;
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: auto;
+    }
+
+    .main__img--container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        /* Ensure the image container takes full width of the grid cell */
+        height: auto;
+    }
+
+    #main__img {
+        width: 80%;
+        height: auto;
+    }
+
+
+    .typing-container {
+        position: absolute;
+        top: 21%;
+        left: 34%;
+        width: 35%;
+        height: auto;
+        color: #384d6d;
+        font-size: 32px;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        transform: rotate(25deg);
+    }
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    .cursor {
+        border-right: 2px solid #384d6d;
+        /* Adjust cursor color as needed */
+        animation: blink 0.75s step-end infinite;
     }
 }
