@@ -78,10 +78,31 @@
     height: 100%;
 }
 
-.navbar__socials .navbar__item .navbar__links{
+.navbar__socials .navbar__item .navbar__links {
     font-size: 2.5rem;
 }
 
+.custom-alert {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+.custom-alert.show {
+    display: block;
+    opacity: 1;
+    bottom: 40px;
+}
 @keyframes rotateAndGrow {
     0% {
         transform: rotate(0deg) scale(1);
@@ -104,19 +125,19 @@
         /* Back to 0 degrees and normal size */
     }
 }
-
-
 @media screen and (max-width: 960px) {
     .navbar__container {
         justify-content: space-between;
         height: 80px;
         width: 100%;
         max-width: 1300px;
-        padding: 0 20px; /* Adjust the padding as needed */
+        padding: 0 20px;
+        /* Adjust the padding as needed */
     }
 
     .navbar__menu {
-        display: none; /* Hide the menu */
+        display: none;
+        /* Hide the menu */
     }
 
     .navbar__logo {
@@ -142,7 +163,6 @@
         height: 100%;
         font-size: 2.5rem;
     }
-
     @keyframes rotateAndGrow {
         0% {
             transform: rotate(0deg) scale(1.2);
