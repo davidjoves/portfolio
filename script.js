@@ -30,3 +30,42 @@ document
         event.preventDefault();
         copyEmailToClipboard();
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const staticText = "Hello! I'm David. I like ";
+        const words = ["algorithms.", "coding.", "designing.", "research."];
+        const typingTextElement = document.getElementById("typing-text");
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100; // Adjust typing speed as needed
+        let pauseBeforeDeleting = 2000; // Pause before deleting the word
+        let pauseBeforeTypingNewWord = 500; // Pause before typing a new word
+    
+        function type() {
+            let currentWord = words[wordIndex];
+            if (isDeleting) {
+                charIndex--;
+                typingTextElement.innerHTML = staticText + currentWord.substring(0, charIndex) + '<span class="cursor"></span>';
+                if (charIndex == 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    setTimeout(type, pauseBeforeTypingNewWord);
+                } else {
+                    setTimeout(type, typingSpeed);
+                }
+            } else {
+                charIndex++;
+                typingTextElement.innerHTML = staticText + currentWord.substring(0, charIndex) + '<span class="cursor"></span>';
+                if (charIndex == currentWord.length) {
+                    isDeleting = true;
+                    setTimeout(type, pauseBeforeDeleting);
+                } else {
+                    setTimeout(type, typingSpeed);
+                }
+            }
+        }
+    
+        type();
+    });
+    
