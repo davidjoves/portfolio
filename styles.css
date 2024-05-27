@@ -671,7 +671,6 @@ body {
     perspective: 1000px;
     margin: 20px;
 }
-
 .experience__card:hover {
     perspective: 1000px;
     margin: 20px;
@@ -757,8 +756,8 @@ body {
     transform: rotateY(180deg);
 }
 
-.project{
-    display:flex; 
+.project {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -772,7 +771,6 @@ body {
     flex-direction: grid;
     align-items: center;
 }
-
 
 .project__container h1 {
     font-weight: bold;
@@ -792,14 +790,13 @@ body {
     -moz-text-fill-color: transparent;
 }
 
-
-#chibi__project{
+#chibi__project {
     width: 50%;
     height: 50%;
     transform: rotateY(180deg);
 }
 
-.project__container p{
+.project__container p {
     font-weight: bold;
     font-size: 64px;
     color: #fff;
