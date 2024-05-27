@@ -33,7 +33,7 @@ document
 
     document.addEventListener("DOMContentLoaded", function() {
         const staticText = "Hello! I'm David. I like ";
-        const words = ["algorithms.", "coding.", "designing.", "research."];
+        const words = ["algorithms.", "coding.", "designing.", "research.", "keyboards."];
         const typingTextElement = document.getElementById("typing-text");
         let wordIndex = 0;
         let charIndex = 0;

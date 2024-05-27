@@ -6,20 +6,22 @@
 }
 
 body {
-    background: #000000;
-    /* Set background color for the body */
+    background-image: linear-gradient(to top, #000000 0%, #033f6a 5%, #033b64 25%, #064776 50%, #033f6a 75%, #000000 100%);
 }
-⁡⁣⁢⁣​‌‍‌
+
 /* 𝗡𝗔𝗩𝗕𝗔𝗥 𝗦𝗧𝗬𝗟𝗘𝗦  */
 ​⁡ .navbar {
+    background: #131313;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
+    width: 100%;
     top: 0;
     z-index: 999;
+
 }
 
 .navbar__container {
@@ -27,7 +29,7 @@ body {
     background: #000000;
     background-color: #000000;
     justify-content: space-between;
-    height: 80px;
+    height: 100%;
     z-index: 1;
     width: 100%;
     margin: 0 auto;
@@ -184,21 +186,20 @@ body {
 }
 
 /* HERO STYLES */
-.main {
-    background: #384d6d;
-    background-image: linear-gradient(to top, #141f71 0%, #000000 100%);
-}
 
 .main__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: center;
     justify-self: center;
+    background-color: blackk;
     margin: 0 auto;
     height: auto;
     z-index: 1;
     width: 100%;
-    padding: 20px;
+    padding: 0 20px;
+    border: none;
+    /* Ensure no borders */
 }
 
 .main__content--tech {
@@ -209,8 +210,11 @@ body {
     padding: 20px;
     background-color: #eaeaea;
     border-radius: 15px;
-    box-shadow: 5px 8px rgba(0, 0, 0, 0.395);
+    box-shadow: 8px 8px #000000;
     text-align: center;
+    margin: 20px auto;
+    /* Ensure there's no unwanted margin causing a line */
+
 }
 .main__content--tech:hover {
     transform: scale(1.05);
@@ -494,7 +498,6 @@ body {
         height: auto;
     }
 
-
     .typing-container {
         position: absolute;
         top: 21%;
@@ -523,4 +526,52 @@ body {
         /* Adjust cursor color as needed */
         animation: blink 0.75s step-end infinite;
     }
+}
+
+/* ABOUT ME STYLES */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.about__container {
+    width: auto;
+    height: auto;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.about__container h3 {
+    font-weight: bold;
+    font-size: 64px;
+    color: #fff;
+    margin-bottom: 20px;
+    /* Adds space below the h3 element */
+    text-align: left;
+    /* Aligns text to the left */
+
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #a6a8a4 0%, #b7c6ea 100%);
+    -webkit-text-stroke: 3px black;
+    /* Adds a black outline */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.about__container p {
+    font-weight: bold;
+    font-size: 32px;
+    color: #fff;
+    max-width: 60%;
+    /* Limits the width of the paragraph */
+    margin: 40px;
+    /* Removes default margins */
+    text-align: left;
+    /* Aligns text to the left */
+    -webkit-text-stroke: 1.75px black;
 }
