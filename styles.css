@@ -575,3 +575,37 @@ body {
     /* Aligns text to the left */
     -webkit-text-stroke: 1.75px black;
 }
+
+@media screen and (max-width: 760px){
+    .about__container h3 {
+        font-weight: bold;
+        font-size: 48px;
+        color: #fff;
+        margin-bottom: 20px;
+        /* Adds space below the h3 element */
+        text-align: left;
+        /* Aligns text to the left */
+    
+        background-color: #ff8177;
+        background-image: linear-gradient(to top, #a6a8a4 0%, #b7c6ea 100%);
+        -webkit-text-stroke: 2.4px black;
+        /* Adds a black outline */
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    
+    .about__container p {
+        font-weight: bold;
+        font-size: 23px;
+        color: #fff;
+        max-width: 60%;
+        /* Limits the width of the paragraph */
+        margin: 40px;
+        /* Removes default margins */
+        text-align: left;
+        /* Aligns text to the left */
+        -webkit-text-stroke: 1.5px black;
+    }
+}
