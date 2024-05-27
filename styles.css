@@ -5,6 +5,9 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-image: linear-gradient(to top, #000000 0%, #033f6a 5%, #033b64 25%, #064776 50%, #033f6a 75%, #000000 100%);
 }
