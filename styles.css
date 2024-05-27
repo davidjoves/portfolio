@@ -575,8 +575,7 @@ body {
     /* Aligns text to the left */
     -webkit-text-stroke: 1.75px black;
 }
-
-@media screen and (max-width: 760px){
+@media screen and (max-width: 760px) {
     .about__container h3 {
         font-weight: bold;
         font-size: 48px;
@@ -585,7 +584,7 @@ body {
         /* Adds space below the h3 element */
         text-align: left;
         /* Aligns text to the left */
-    
+
         background-color: #ff8177;
         background-image: linear-gradient(to top, #a6a8a4 0%, #b7c6ea 100%);
         -webkit-text-stroke: 2.4px black;
@@ -595,7 +594,7 @@ body {
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
-    
+
     .about__container p {
         font-weight: bold;
         font-size: 23px;
@@ -608,4 +607,137 @@ body {
         /* Aligns text to the left */
         -webkit-text-stroke: 1.5px black;
     }
+}
+
+/* Experiences */
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 50px 0;
+}
+
+.experience__container {
+    width: 100%;
+    height: auto;
+    padding: 0 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: grid;
+    align-items: center;
+}
+
+#chibi__experience{
+    width: 40%;
+}
+.experience__container #caption {
+    font-weight: bold;
+    font-size: 40px;
+    -webkit-text-stroke: 3px black;
+    color: #fff;
+}
+
+
+.experience__container h1 {
+    font-weight: bold;
+    font-size: 64px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: left;
+    /* Ensure text is left-aligned */
+    align-self: flex-start;
+    /* Align the h1 element itself to the start of the container */
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #a6a8a4 0%, #b7c6ea 100%);
+    -webkit-text-stroke: 3px black;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.experience__container--cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.experience__card {
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.card__inner {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card__back,
+.card__front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.card__front {
+    background-color: #fff;
+}
+
+
+#peter__card{
+    width: 50%;
+    height: 50%;
+}
+
+.card__back {
+    background-color: #f8f8f8;
+    transform: rotateY(180deg);
+    padding: 0;
+}
+
+.card__back h3 {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+
+}
+
+.card__back h4 {
+    display: flex;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.card__back h5 {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.card__back p {
+    display: flex;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.flipped .card__inner {
+    transform: rotateY(180deg);
 }

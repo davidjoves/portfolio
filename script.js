@@ -68,4 +68,10 @@ document
     
         type();
     });
+
+
+    function toggleFlip(card) {
+        card.classList.toggle('flipped');
+    }
+    
     
