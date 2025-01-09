@@ -796,18 +796,155 @@ body {
     transform: rotateY(180deg);
 }
 
-.project__container p {
+.project__container--cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: float 3.5s infinite;
+}
+
+.experience__card {
+    perspective: 1000px;
+    margin: 20px;
+}
+.experience__card:hover {
+    perspective: 1000px;
+    margin: 20px;
+    animation: rotateAndGrow 3s;
+}
+
+.card__inner {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card__back,
+.card__front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 6px 6px black;
+    border-radius: 10px;
+}
+
+.card__front {
+    background-color: #fff;
+}
+
+.card__front h3 {
+    margin-top: 20px;
+    /* Adjust the margin as needed */
+}
+
+#peter__card {
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.card__back {
+    background-color: #f8f8f8;
+    transform: rotateY(180deg);
+    padding: 0;
+}
+
+.card__back h3 {
+    display: flex;
     font-weight: bold;
-    font-size: 64px;
-    color: #fff;
-    margin-bottom: 20px;
-    text-align: left;
-    /* Ensure text is left-aligned */
-    /* Align the h1 element itself to the start of the container */
-    background-color: #ff8177;
-    -webkit-text-stroke: 3px black;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    font-size: 20px;
+    margin: 10px;
+
+}
+
+.card__back h4 {
+    display: flex;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.card__back h5 {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.card__back p {
+    display: flex;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.flipped .card__inner {
+    transform: rotateY(180deg);
+}
+.project__container--cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: float 3.5s infinite;
+}
+
+.project__card {
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.project__card:hover .card__inner {
+    transform: rotateY(180deg);
+}
+
+.card__inner {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card__back,
+.card__front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 6px 6px black;
+    border-radius: 10px;
+}
+
+.card__front {
+    background-color: #fff;
+}
+
+.card__back {
+    background-color: #f8f8f8;
+    transform: rotateY(180deg);
+    padding: 0;
+}
+
+.card__front h2,
+.card__front h3,
+.card__back h4,
+.card__back p {
+    margin: 10px;
 }
