@@ -627,7 +627,7 @@ body {
     padding: 0 50px;
     margin: 0 auto;
     display: flex;
-    flex-direction: grid;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -647,10 +647,7 @@ body {
     font-size: 64px;
     color: #fff;
     margin-bottom: 20px;
-    text-align: left;
-    /* Ensure text is left-aligned */
-    align-self: flex-start;
-    /* Align the h1 element itself to the start of the container */
+    text-align: center;
     background-color: #ff8177;
     background-image: linear-gradient(to top, #a6a8a4 0%, #b7c6ea 100%);
     -webkit-text-stroke: 3px black;
@@ -754,6 +751,27 @@ body {
 
 .flipped .card__inner {
     transform: rotateY(180deg);
+}
+@media screen and (max-width: 768px) {
+    .experience__container h1 {
+        font-size: 48px;
+    }
+
+    .experience__container #caption {
+        font-size: 32px;
+    }
+
+    .card__inner {
+        width: 200px;
+        height: 250px;
+    }
+
+    .card__back h3,
+    .card__back h4,
+    .card__back h5,
+    .card__back p {
+        font-size: 12px;
+    }
 }
 
 .project {
@@ -902,7 +920,6 @@ body {
     perspective: 1000px;
     margin: 20px;
 }
-
 .project__card:hover .card__inner {
     transform: rotateY(180deg);
 }
@@ -942,9 +959,9 @@ body {
     padding: 0;
 }
 
-.card__front h2,
-.card__front h3,
 .card__back h4,
-.card__back p {
+.card__back p,
+.card__front h2,
+.card__front h3 {
     margin: 10px;
 }
